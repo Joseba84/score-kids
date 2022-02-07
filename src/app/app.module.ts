@@ -12,12 +12,14 @@ import { MatIconModule } from '@angular/material/icon';
 import { DetailComponent } from './components/detail/detail.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { KidListComponent } from './components/kid-list/kid-list.component';
+import { PrizesComponent } from './prizes/prizes.component';
 @NgModule({
   declarations: [
     AppComponent,
     DetailComponent,
     NavigationComponent,
-    KidListComponent
+    KidListComponent,
+    PrizesComponent
   ],
   imports: [
     BrowserModule,

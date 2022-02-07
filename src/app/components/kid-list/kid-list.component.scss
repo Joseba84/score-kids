@@ -1,0 +1,29 @@
+.list {
+    width: 90%;
+    margin: 0 auto;
+
+    h3, span {
+        font-size: 1.3rem;
+    }
+
+    p {
+        display: flex;
+        align-items: center;
+
+    }
+    span {
+        margin-left: 5px;
+    }
+
+    mat-list-item {
+        border-bottom: 2px solid #c2185b;
+        height: 100px;
+    }
+
+    .mat-list-avatar {
+        width: 80px;
+        height: 80px;
+        padding: 10px 0;
+        border-radius: 25px;
+    }
+}

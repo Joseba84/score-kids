@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-import { Kid } from './models/kid';
-import { KidsService } from './services/kids.service';
-import { getImageUrl } from './helpers';
+import { Kid } from './../../models/kid';
+import { KidsService } from './../../services/kids.service';
+import { getImageUrl } from './../../helpers';
 import { Router } from '@angular/router';
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-kid-list',
+  templateUrl: './kid-list.component.html',
+  styleUrls: ['./kid-list.component.scss']
 })
-export class AppComponent {
+export class KidListComponent {
   title = 'score-kids';
   kids: Kid[] = [];
   currentId: number | undefined;
@@ -24,10 +24,15 @@ export class AppComponent {
 
   showDetail(id: number) {
     this.currentId = id;
-    this.router.navigate([`/detail/${this.currentId}`, { id: this.currentId, foo: 'foo' }]);
+    this.router.navigate([`/detail/${this.currentId}`]);
   }
 
   getImageUrl(image: string): string {
     return getImageUrl(image);
+  }
+
+  addScore(kid: Kid) {
+    kid.score = kid.score + 1;
+    this.kidsService.updateData(kid);
   }
 }

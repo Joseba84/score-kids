@@ -1,0 +1,12 @@
+<div>
+    <mat-card *ngIf="kid" class="detail">
+        <mat-card-title-group>
+            <mat-card-title>{{ kid.name }}</mat-card-title>
+            <mat-card-subtitle>{{ kid.score }}</mat-card-subtitle>
+            <img mat-card-sm-image [src]="getImageUrl(kid.image)">
+        </mat-card-title-group>
+        <mat-card-content>
+            <button mat-raised-button color="primary" (click)="addScore()">Añadir punto</button>
+        </mat-card-content>
+    </mat-card>
+</div>

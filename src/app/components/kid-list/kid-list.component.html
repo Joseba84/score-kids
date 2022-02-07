@@ -1,0 +1,17 @@
+<div>
+    <mat-toolbar>
+        <span>Puntos</span>
+    </mat-toolbar>
+    <mat-list class="list">
+        <mat-list-item *ngFor="let kid of kids; index as i">
+            <img matListAvatar [src]="getImageUrl(kid.image)" [alt]="kid.name">
+            <h3 matLine> {{ kid.name }} </h3>
+            <p matLine>
+                <mat-icon aria-hidden="false" aria-label="'Star'">star</mat-icon><span>{{ kid.score }} </span>
+            </p>
+            <button mat-raised-button color="primary" (click)="addScore(kid)">+ 1</button>
+            <button mat-raised-button color="primary" (click)="showDetail(kid.id)">Ver</button>
+        </mat-list-item>
+    </mat-list>
+</div>
+
